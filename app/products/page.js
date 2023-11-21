@@ -206,7 +206,7 @@ const Products = () => {
   return (
     <>
       <div className="container mt-2 d-flex justify-content-between">
-        <Button variant='primary' onClick={showModal}>Yeni Ürün Ekle</Button>
+        <Button variant='primary' className="bg-primary" onClick={showModal}>Yeni Ürün Ekle</Button>
         <Form.Control className='w-25' type='search' name='search' placeholder='Ürün Ara' onChange={searchProducts} />
         <Form.Select className='w-25' onChange={(e) => filterCategory(e.target.value)}>
           <option value=''>Kategori</option>
@@ -221,7 +221,7 @@ const Products = () => {
         <EditProduct showEdit={showEdit} handleEditClose={handleEditClose} handleEditChange={handleEditChange} editProductHandler={editProductHandler} editedProduct={editedProduct} />
         <ViewProduct showView={showView} handleViewClose={handleViewClose} editedProduct={editedProduct} />
       </div>
-      <div className='container d-flex flex-wrap align-items-center gap-2 text-center'>
+      <div className='container d-flex flex-wrap align-items-center justify-center gap-2 text-center'>
         {isLoading ? (<div className='mx-auto'>
           <Loader /></div>
         ) : (

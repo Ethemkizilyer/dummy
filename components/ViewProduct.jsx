@@ -90,7 +90,11 @@ const ViewProduct = ({ showView, handleViewClose, editedProduct }) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleViewClose}>
+        <Button
+          variant="secondary"
+          className="bg-secondary"
+          onClick={handleViewClose}
+        >
           Kapat
         </Button>
       </Modal.Footer>

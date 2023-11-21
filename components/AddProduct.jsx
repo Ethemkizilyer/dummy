@@ -61,10 +61,14 @@ const AddProduct = ({ show, handleClose, handleChange, addProductHandler }) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="danger" onClick={handleClose}>
+        <Button variant="danger" className="bg-danger" onClick={handleClose}>
           Kapat
         </Button>
-        <Button variant="primary" onClick={addProductHandler}>
+        <Button
+          variant="primary"
+          className="bg-primary"
+          onClick={addProductHandler}
+        >
           Ekle
         </Button>
       </Modal.Footer>

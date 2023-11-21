@@ -97,11 +97,16 @@ const EditProduct = ({
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="danger" onClick={handleEditClose}>
+        <Button
+          variant="danger"
+          className="bg-danger"
+          onClick={handleEditClose}
+        >
           Kapat
         </Button>
         <Button
           variant="primary"
+          className="bg-primary"
           onClick={(e) => editProductHandler(e, editedProduct.id)}
         >
           Kaydet

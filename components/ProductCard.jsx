@@ -19,9 +19,7 @@ const ProductCard = ({ product, deleteHandler, editHandler, viewHandler }) => {
           alt="product-image"
           className="w-100 h-75"
         />
-        <h6 className="pt-3">
-          {product.title}
-        </h6>
+        <h6 className="pt-3">{product.title}</h6>
       </CardHeader>
       <CardBody>
         <div className="costContainer d-flex justify-content-between align-items-center">
@@ -41,17 +39,25 @@ const ProductCard = ({ product, deleteHandler, editHandler, viewHandler }) => {
         </p>
       </CardBody>
       <CardFooter>
-        <Button variant="primary" onClick={(e) => viewHandler(e, product.id)}>
+        <Button
+          variant="primary"
+          className="bg-primary"
+          onClick={(e) => viewHandler(e, product.id)}
+        >
           İncele
         </Button>
         <Button
           variant="warning"
-          className="ms-1 me-1"
+          className="mx-1 bg-warning"
           onClick={(e) => editHandler(e, product.id)}
         >
           Güncelle
         </Button>
-        <Button variant="danger" onClick={(e) => deleteHandler(e, product.id)}>
+        <Button
+          variant="danger"
+          className="bg-danger"
+          onClick={(e) => deleteHandler(e, product.id)}
+        >
           Sil
         </Button>
       </CardFooter>
